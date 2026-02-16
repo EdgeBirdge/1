@@ -140,10 +140,12 @@
             display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;
         }
         .feature-card {
+            display: block;
             background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 16px; padding: 40px; transition: all 0.3s ease;
         }
-        .feature-card:hover { border-color: rgba(0, 255, 179, 0.3); transform: translateY(-4px); }
+        .feature-card-link { text-decoration: none; color: inherit; display: block; }
+        .feature-card-link:hover .feature-card { border-color: rgba(0, 255, 179, 0.3); transform: translateY(-4px); }
         .feature-icon {
             width: 56px; height: 56px; margin-bottom: 24px; background: rgba(0, 255, 179, 0.1);
             border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px;
@@ -387,6 +389,7 @@
             </p>
         </div>
         <div class="features-grid">
+            <a href="https://zchat-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="feature-card-link">
             <div class="feature-card">
                 <div class="feature-icon">🎓</div>
                 <h3 class="feature-title" data-lang="feature1-title">ZChat - AI Financial Education</h3>
@@ -400,6 +403,7 @@
                     <span class="tag" data-lang="tag1-3">Trading Sandbox</span>
                 </div>
             </div>
+            </a>
             <div class="feature-card">
                 <div class="feature-icon">🤖</div>
                 <h3 class="feature-title" data-lang="feature2-title">AA - Autonomous Financial Agent</h3>
